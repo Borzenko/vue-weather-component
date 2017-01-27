@@ -2,14 +2,15 @@
 
 <template>
   <div class="weather-widget">
-    <div class="weather-delete-btn" v-if="isDeletable" @click="remove()">
+    <loader v-if="!weather.list"></loader>
+    <div class="weather-delete-btn" v-if="isDeletable && weather.list" @click="remove()">
       <button type="text" class="x-mark"></button>
     </div>
-    <div class="weather-widget-title">
+    <div v-if="weather.list" class="weather-widget-title">
       {{location.city}}<span v-if="location.region">, {{location.region}}</span>
     </div>
-    <div>
-      <div v-if="weather.list">
+    <div v-if="weatherDay">
+      <div>
         <div>
           <div class="weather-widget-day">
             <div class="weather-widget-day-title">

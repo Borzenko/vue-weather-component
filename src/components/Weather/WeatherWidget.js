@@ -1,3 +1,5 @@
+import Loader from '../Loader/Loader.vue';
+
 import locationService from '../../services/location';
 import weatherService from '../../services/weather';
 
@@ -8,6 +10,9 @@ export default {
       type: String,
       default: '',
     },
+  },
+  components: {
+    Loader,
   },
   data: () => ({
     location: {},
