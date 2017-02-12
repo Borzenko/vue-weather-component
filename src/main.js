@@ -1,12 +1,10 @@
 import 'expose?$!expose?jQuery!jquery';
-// import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css';
 import 'font-awesome/css/font-awesome.css';
 import Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import VueRouter from 'vue-router';
 import App from './App';
-// import store from './store';
 
 Vue.use(VueAxios, axios);
 Vue.use(VueRouter);

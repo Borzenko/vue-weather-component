@@ -1,3 +1,4 @@
+import axios from 'axios';
 import WeatherWidget from './WeatherWidget.vue';
 import WeatherInput from './WeatherInput.vue';
 
@@ -13,6 +14,7 @@ export default {
     WeatherInput,
   },
   created: function() {
+    axios.get()
     this.cities = JSON.parse(localStorage.getItem('citites')) || [];
   },
   methods: {
@@ -22,8 +24,8 @@ export default {
       };
       localStorage.setItem('citites', JSON.stringify(this.cities));
     },
-    removeCity: function(city) {
-      let index = this.cities.indexOf(city);
+    removeCity: function(city) {  
+      const index = this.cities.indexOf(city);
       this.cities.splice(index, 1);
       localStorage.setItem('citites', JSON.stringify(this.cities));
     },
