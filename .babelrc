@@ -1,5 +1,5 @@
 {
   "presets": ["es2015", "es2017", "stage-2"],
-  "plugins": ["transform-runtime"],
+  "plugins": ["transform-runtime", "transform-decorators-legacy", "transform-flow-strip-types"],
   "comments": false
 }

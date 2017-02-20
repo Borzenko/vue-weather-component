@@ -20,6 +20,9 @@ module.exports = {
   'env': {
     "jquery" : true
   },
+  'globals': {
+    'localStorage': true
+  },
   // add your custom rules here
   'rules': {
     // don't require .vue extension when importing
